@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin-left: 100px;
+    }
+
+    .parent {
+      width: 300px;
+      height: 100px;
+      background-color: gray;
+      margin-bottom: 10px;
+    }
+
+    .single-line {
+      line-height: 100px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 行内流传着一种说法，单行文本垂直居中要将高度和行高设置成相同的值，但高度其实没必要设置。 -->
+  <!-- 实际上，文本本身就在一行居中显示。在不设置高度的情况下，行高撑开高度。 -->
+  <div class="parent single-line">line-height</div>
+</body>
+
+</html>
