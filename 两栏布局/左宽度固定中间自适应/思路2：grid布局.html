@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html * {
+      padding: 0;
+      margin: 0;
+    }
+
+    article>div {
+      min-height: 100px;
+    }
+
+    article {
+      display: grid;
+      grid-template-rows: 100px;
+      grid-template-columns: 200px auto;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: red;
+    }
+
+    .main {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <article>
+      <div class="sidebar"></div>
+      <div class="main">grid布局</div>
+    </article>
+  </section>
+</body>
+
+</html>
