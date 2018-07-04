@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .layout {
+      margin-bottom: 50px;
+    }
+
+    .layout article div {
+      min-height: 100px;
+    }
+
+    article {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 200px auto 300px;
+    }
+
+    .left {
+      background: red;
+    }
+
+    .center {
+      background: yellow;
+    }
+
+    .right {
+      background: green;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <article>
+      <div class="left"></div>
+      <div class="center">
+        <h1>grid解决方案</h1>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+</body>
+
+</html>

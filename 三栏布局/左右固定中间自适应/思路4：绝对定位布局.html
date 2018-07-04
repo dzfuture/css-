@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .layout {
+      margin-bottom: 50px;
+    }
+
+    .layout article div {
+      min-height: 100px;
+    }
+
+    article>div {
+      position: absolute;
+    }
+
+    .left {
+      left: 0;
+      width: 300px;
+      background-color: red;
+    }
+
+    .center {
+      left: 300px;
+      right: 300px;
+      background-color: yellow;
+    }
+
+    .right {
+      right: 0;
+      width: 300px;
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="layout">
+    <article>
+      <div class="left"></div>
+      <div class="center">
+        <h1>绝对定位解决方案</h1>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+        <p>1. 这是三栏布局的中间部分</p>
+      </div>
+      <div class="right"></div>
+
+    </article>
+  </section>
+</body>
+
+</html>
