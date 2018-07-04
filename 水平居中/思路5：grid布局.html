@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <style>
+    html * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .parent {
+      background-color: yellow;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .child {
+      background-color: green;
+      height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 1. 在网格容器上设置justify-items或者justify-content为center -->
+  <div class="parent parent1">
+    <style>
+      .parent1 {
+        display: grid;
+        /* justify-content: center; */
+        justify-items: center;
+      }
+    </style>
+
+    <div class="child child1">justify-content: center</div>
+  </div>
+  <br>
+  <br>
+  <!-- 2. 在网格项目上设置justify-self: center或者margin: 0 auto -->
+  <div class="parent parent1">
+    <style>
+      .parent2 {
+        display: grid;
+      }
+      .child2 {
+        /* justify-self: center; */
+        margin: 0 auto;
+      }
+    </style>
+
+    <div class="child child2">justify-self: center;</div>
+  </div>
+</body>
+
+</html>

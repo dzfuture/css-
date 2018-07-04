@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <style>
+    html * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .parent {
+      background-color: yellow;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .child {
+      background-color: green;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. 子元素宽度固定，直接设置子元素的margin: 0 auto实现水平居中 -->
+  <div class="parent parent1">
+    <style>
+      .child1 {
+        width: 150px;
+        margin: 0 auto;
+      }
+    </style>
+
+    <div class="child child1">子元素宽度固定</div>
+  </div>
+  <br>
+  <br>
+  <!-- 2. 子元素宽度未知，子元素设置为display:table，使子元素变成块级元素，同时table还具有包裹性，宽度由内容撑开。 -->
+  <div class="parent parent2">
+      <style>
+        .child2 {
+          display: table;
+          margin: 0 auto;
+        }
+    </style>
+    
+    <div class="child child2">display: table</div>
+  </div>
+</body>
+</html>

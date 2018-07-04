@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>text-align+inline-block实现行内元素水平居中</title>
+  <style>
+    html * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .parent {
+      background-color: yellow;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .child {
+      background-color: green;
+      height: 30px;
+    }
+  </style>
+  <style>
+    .parent1 {
+      text-align: center;
+    }
+    .child1 {
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent parent1">
+    <div class="child child1">text-align:center</div>
+  </div>
+</body>
+</html>

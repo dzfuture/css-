@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <style>
+    html * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .parent {
+      background-color: yellow;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .child {
+      background-color: green;
+      height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 1. 配合translate()位移函数 -->
+  <!-- 原理：translate函数的百分比是相对于自身宽度的，所以left:50%配合translateX(-50%)可实现居中效果。 -->
+  <div class="parent parent1">
+    <style>
+      .parent1 {
+        position: relative;
+      }
+
+      .child1 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    </style>
+
+    <div class="child child1">transform:translateX(-50%)</div>
+  </div>
+  <br>
+  <br>
+  <!-- 2. 配合relative -->
+  <!-- relative的偏移属性是相对于自身的，因为子元素已经被设置为absolute，所以若使用relative，则需要增加一层结构，使其宽度与子元素宽度相同 -->
+  <!-- 该方法全兼容，但是增加了html结构 -->
+  <div class="parent parent2">
+    <style>
+      .parent2 {
+        position: relative;
+      }
+
+      .wraper1 {
+        position: absolute;
+        left: 50%;
+      }
+
+      .child2 {
+        position: relative;
+        left: -50%;
+      }
+    </style>
+
+    <div class="wraper1">
+      <div class="child child2">借助relative</div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <!-- 3. 配合负margin -->
+  <!-- 原理：margin的百分比是相对于包含快的宽度的，所以需要增加一层div机构。由于宽度width的默认值是auto，当甚至负margin时，width也会随着变大。所以此时需要定宽处理。 -->
+  <!-- 虽然全兼容，但需要增加页面的机构及定宽处理，所以限制了应用场景。 -->
+  <div class="parent parent3">
+    <style>
+      .parent3 {
+        position: relative;
+      }
+
+      .wraper {
+        position: absolute;
+        left: 50%;
+      }
+
+      .child3 {
+        width: 100px;
+        margin-left: -50%;
+      }
+    </style>
+
+    <div class="wraper">
+      <div class="child child3">margin:-50%</div>
+    </div>
+  </div>
+</body>
+
+</html>
