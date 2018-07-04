@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin-left: 100px;
+    }
+
+    .parent {
+      width: 300px;
+      height: 100px;
+      background-color: gray;
+      margin-bottom: 10px;
+    }
+
+    .child {
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 1. 在父元素设置text-align和vertical-align，并将父元素设置为table-cell元素，子元素设置为inline-block元素。 -->
+  <div class="parent parent1">
+    <style>
+      .parent1 {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .child1 {
+        display: inline-block;
+      }
+    </style>
+    <div class="child child1">测试文字</div>
+  </div>
+  <br>
+  <br>
+  <!-- 2. 若子元素是图像，可不使用table-cell，而使其父元素用行高替代高度，且字体大小设为0。子元素本身设置vertical-align:middle -->
+  <div class="parent parent2">
+    <style>
+      .parent2 {
+        text-align: center;
+        line-height: 100px;
+        font-size: 0;
+      }
+      img {
+        vertical-align: middle;
+      }
+    </style>
+    <img src="https://pic4.zhimg.com/80/572dd89eb87dd3857d2a33815a58a764_hd.jpg" width="50%" alt="">
+  </div>
+</body>
+
+</html>

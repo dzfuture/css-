@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin-left: 100px;
+    }
+
+    .parent {
+      width: 300px;
+      height: 100px;
+      background-color: gray;
+      margin-bottom: 10px;
+    }
+
+    .child {
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- margin + vertical-align -->
+  <!-- 原理： -->
+  <!-- 要想在父元素中设置vertical-align，须设置为table-cell元素； -->
+  <!-- 要想让margin:0 auto实现水平居中的块元素内容撑开宽度，须设置为table元素。而table元素是可以嵌套在tabel-cell元素里面的，就像一个单元格里可以嵌套一个表格。 -->
+  <div class="parent parent1">
+    <style>
+      .parent1 {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .child {
+        display: table;
+        margin: 0 auto;
+      }
+    </style>
+    <div class="child child1">测试文字</div>
+  </div>
+</body>
+
+</html>

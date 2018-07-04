@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin-left: 100px;
+    }
+
+    .parent {
+      width: 300px;
+      height: 100px;
+      background-color: gray;
+      margin-bottom: 10px;
+    }
+
+    .child {
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 1. 利用绝对定位元素的盒模型特性，在宽和高为确定值的基础上，设置margin:auto -->
+  <div class="parent parent1">
+    <style>
+      .parent1 {
+        position: relative;
+      }
+
+      .child1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 50px;
+        width: 80px;
+        margin: auto;
+      }
+    </style>
+    <div class="child child1">测试文字</div>
+  </div>
+  <br>
+  <br>
+  <!-- 2. 利用绝对定位元素的偏移属性和translate()函数的自身偏移达到水平垂直居中的效果 -->
+  <div class="parent parent2">
+    <style>
+      .parent2 {
+        position: relative;
+      }
+
+      .child2 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+    <div class="child child2">测试文字</div>
+  </div>
+  <br>
+  <br>
+  <!-- 3. 在子元素宽高已知的情况下，可以配合margin负值达到水平垂直居中效果 -->
+  <div class="parent parent3">
+    <style>
+      .parent3 {
+        position: relative;
+      }
+
+      .child3 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 80px;
+        height: 60px;
+        margin-left: -40px;
+        margin-top: -30px;
+      }
+    </style>
+    <div class="child child3">测试文字</div>
+  </div>
+</body>
+
+</html>
